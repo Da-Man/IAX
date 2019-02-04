@@ -1,0 +1,48 @@
+#main {
+	margin-top: 8vh;
+}
+
+h2, h4 {
+	margin-top: 4vh;
+	margin-bottom: 5vh;
+	color: #212121;
+}
+
+h6 {
+	text-align: center;
+	color: grey;
+}
+
+//TBC...
+nav a{
+	align-items: center;
+	justify-content: space-around;
+}
+
+form div {
+	margin-bottom: 5vh;
+}
+
+.submit_btn {
+	align-items: center;
+	justify-content: space-around;
+	margin-top: 10vh;
+}
+
+#datasets {
+	background-color: #FAFAFA;
+	border-radius: 20px;
+	padding: 30px;
+}
+
+#blackbox_models {
+	background-color: #EEEEEE;
+	border-radius: 20px;
+	padding: 30px;
+}
+
+#xai_models {
+	background-color: #BDBDBD;
+	border-radius: 20px;
+	padding: 30px;
+}

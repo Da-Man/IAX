@@ -1,0 +1,49 @@
+{% extends 'layout.html' %}
+{% block body %}
+<!-- Main -->
+<div class="container-fluid" id="main">
+	<div>
+		<form action="{{ url_for('show_results') }}" method="POST">
+			<div id="datasets">
+				<h6>Step 1</h6>
+				<h2>Upload datasets.</h2>
+				<div class="custom-file">
+				  <input type="file" class="custom-file-input" id="customFile" multiple="" name="customFile">
+				  <label class="custom-file-label" for="customFile" id="customFileLabel">Choose file</label>
+				</div>
+			</div>
+
+			<div id="blackbox_models">
+				<h6>Step 2</h6>
+				<h2>Pick blackbox model.</h2>
+				<select class="custom-select" id="blackbox_models_list" name="blackbox_models_list">
+					<option selected>Choose...</option>
+				    <option value="1">Random Forest</option>
+				    <option value="2">Dense Neural Network</option>
+				    <option value="3">XG Boost</option>
+				    <option value="3">CNN</option>
+				</select>
+
+				<h4>Or, upload your own.</h4>
+				<div class="custom-file">
+				  <input type="file" class="custom-file-input" id="customModel">
+				  <label class="custom-file-label" for="customModel" id="customModelLabel">Choose file</label>
+				</div>
+			</div>
+
+			<div id="xai_models">
+				<h6>Step 3</h6>
+				<h2>Pick XAI model.</h2>
+				<select class="custom-select" id="xai_models_list" name="xai_models_list">
+					<option selected>Choose...</option>
+				    <option value="1">LIME</option>
+				    <option value="2">SHAP</option>
+				</select>
+			</div>
+			<div class="row submit_btn">
+				<input type="submit" class="btn btn-dark" value="Let's Go">
+			</div>
+		</form>
+	</div>
+</div>
+{% endblock %}
